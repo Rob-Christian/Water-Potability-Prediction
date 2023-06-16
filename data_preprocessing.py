@@ -60,3 +60,7 @@ X = X_retrieved[(X_retrieved['ph'] >= lower_ph) & (X_retrieved['ph'] <= upper_ph
 y = X['Potability'].to_numpy()
 y = np.reshape(y, (X.shape[0], 1))
 X.drop("Potability", axis = 1, inplace = True)
+
+# Preparation as input for machine learning algorithms
+X_subset, X_test, y_subset, y_test = train_test_split(X, y, test_size = 0.1, random_state = 42, shuffle = True, stratify = y)
+skf = StratifiedKFold(n_splits = 10, shuffle = True, random_state = 42)
