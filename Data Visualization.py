@@ -27,8 +27,9 @@ plt.legend(['Non Potable', 'Potable'],prop={'size': 15})
 
 ## Use t-Distributed Stochastic Neighbor Embedding with 2 components only
 
+X_tsne = stats.zscore(X)
 tsne = TSNE(n_components=2, verbose=1, perplexity=40, n_iter=300)
-tsne_results = tsne.fit_transform(X_PCA)
+tsne_results = tsne.fit_transform(X_tsne)
 df_subset = pd.DataFrame()
 
 # Store the reduced dimension in a dataframe
