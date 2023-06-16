@@ -70,7 +70,7 @@ for lc in l:
         NN2_test_NPV.append(tn/(tn + fn))
         
         # Saves model architecture
-        model.save(r'C:\Users\rmcad\Downloads\Research\Water Potability\Architecture1\a{}.h5'.format(i_s+1))
+        model.save(r'C:\Users\...\Architecture1\a{}.h5'.format(i_s+1))
         i_s += 1
     
     # Updates the mean metrics for each fold
