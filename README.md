@@ -17,5 +17,10 @@ From the methodology, the codes must be concatenated before running as follows:
 10. ann4.py
 11. ann2_sensitivity&probability_analysis.py
 ## Results and Discussion
-
+### Data Preprocessing
+In this part, dataset was preprocessed by removing samples with missing parameters and samples with outliers in its parameters. Outliers were detected through interquartile range where a sample is considered outlier if at least one of its parameter has a value 1.5 times lower/higher than the quartiles 1/3. Shown here the result of preprocessing part
+![image](https://github.com/Rob-Christian/Water-Potability-Prediction/assets/59250293/654390df-fa08-44e8-9b12-c2425738d701)
+### Principal Component Analysis
+### Model Performance
+### ANN2 Sensitivity Analysis
 ## Credits
