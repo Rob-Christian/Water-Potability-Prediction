@@ -46,16 +46,8 @@ IQR_tb = np.percentile(X_retrieved['Turbidity'], 75) - np.percentile(X_retrieved
 upper_tb = np.percentile(X_retrieved['Turbidity'], 75) + 1.5*IQR_tb
 lower_tb = np.percentile(X_retrieved['Turbidity'], 25) - 1.5*IQR_tb
 
+# Filter out samples with parameter outliers
 X = X_retrieved[(X_retrieved['ph'] >= lower_ph) & (X_retrieved['ph'] <= upper_ph) &
-               (X_retrieved['Hardness'] >= lower_hard) & (X_retrieved['Hardness'] <= upper_hard) &
-            (X_retrieved['Solids'] >= lower_solids) & (X_retrieved['Solids'] <= upper_solids) &
-            (X_retrieved['Sulfate'] >= lower_sulfate) & (X_retrieved['Sulfate'] <= upper_sulfate) &
-            (X_retrieved['Conductivity'] >= lower_cond) & (X_retrieved['Conductivity'] <= upper_cond) &
-            (X_retrieved['Organic_carbon'] >= lower_org) & (X_retrieved['Organic_carbon'] <= upper_org) &
-            (X_retrieved['Trihalomethanes'] >= lower_tri) & (X_retrieved['Trihalomethanes'] <= upper_tri) &
-            (X_retrieved['Turbidity'] >= lower_tb) & (X_retrieved['Turbidity'] <= upper_tb)]
-
-X_retrieved = X_retrieved[(X_retrieved['ph'] >= lower_ph) & (X_retrieved['ph'] <= upper_ph) &
                (X_retrieved['Hardness'] >= lower_hard) & (X_retrieved['Hardness'] <= upper_hard) &
             (X_retrieved['Solids'] >= lower_solids) & (X_retrieved['Solids'] <= upper_solids) &
             (X_retrieved['Sulfate'] >= lower_sulfate) & (X_retrieved['Sulfate'] <= upper_sulfate) &
