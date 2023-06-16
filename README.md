@@ -40,7 +40,7 @@ Summarized below the performance of different machine learning algorithms with t
 1. Balanced complexity since there are only few training variables.
 ## ANN2 Sensitivity Analysis
 Since ANN2 performs best in most of the metrics, neural network sensitivity analysis was applied in the saved architecture for identification of the most important parameter based on perturbation response.
-![image](https://github.com/Rob-Christian/Water-Potability-Prediction/assets/59250293/f9a8ce43-e994-4b6c-b934-c8c2f03d423c)
+![image](image.png)
 ### Observations
 1. Hardness input has the highest perturbation response on all inputs
 2. All perturbation responses are very low (less than 2%)
